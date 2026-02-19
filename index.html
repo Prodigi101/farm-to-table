@@ -451,6 +451,246 @@
     </div>
   </footer>
 
+  <!-- ============================================================
+       SUBSCRIPTION MODAL
+       ============================================================ -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+
+      <!-- Header -->
+      <div class="modal__header">
+        <div class="modal__header-left">
+          <p class="modal__brand">Farm to Table</p>
+          <p class="modal__title" id="modalTitle">Start your subscription</p>
+        </div>
+        <button class="modal__close" id="modalClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+
+      <!-- Step progress -->
+      <div class="modal__progress">
+        <div class="modal__steps">
+          <div class="modal__step active" data-step="1">
+            <span class="modal__step-num">1</span>
+            <span class="modal__step-label">Your plan</span>
+          </div>
+          <div class="modal__step-line"></div>
+          <div class="modal__step" data-step="2">
+            <span class="modal__step-num">2</span>
+            <span class="modal__step-label">Delivery</span>
+          </div>
+          <div class="modal__step-line"></div>
+          <div class="modal__step" data-step="3">
+            <span class="modal__step-num">3</span>
+            <span class="modal__step-label">Preferences</span>
+          </div>
+          <div class="modal__step-line"></div>
+          <div class="modal__step" data-step="4">
+            <span class="modal__step-num">4</span>
+            <span class="modal__step-label">Review</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1: Plan summary + swap preferences -->
+      <div class="modal__body" id="step1">
+        <div class="modal__plan-summary" id="planSummary">
+          <!-- populated by JS -->
+        </div>
+
+        <div class="modal__field-group">
+          <h4 class="modal__group-title">Swap preferences</h4>
+          <p class="modal__group-sub">Each delivery you'll receive your standard box. Use your swaps to personalise it. Let us know what to avoid and what you love.</p>
+          <div class="modal__field">
+            <label for="swapOut">Items you'd like to swap out or avoid</label>
+            <textarea id="swapOut" name="swapOut" rows="3" placeholder="e.g. I don't eat yam, prefer not to receive pak choi..."></textarea>
+          </div>
+          <div class="modal__field">
+            <label for="swapIn">Items you'd love to see more of</label>
+            <textarea id="swapIn" name="swapIn" rows="3" placeholder="e.g. Extra callaloo, more seasonal fruit, love anything citrus..."></textarea>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 2: Delivery details -->
+      <div class="modal__body hidden" id="step2">
+        <div class="modal__field-group">
+          <h4 class="modal__group-title">Your details</h4>
+          <div class="modal__field-row">
+            <div class="modal__field">
+              <label for="firstName">First name <span class="req">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="Nadine" autocomplete="given-name" />
+            </div>
+            <div class="modal__field">
+              <label for="lastName">Last name <span class="req">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Campbell" autocomplete="family-name" />
+            </div>
+          </div>
+          <div class="modal__field-row">
+            <div class="modal__field">
+              <label for="phone">Phone number <span class="req">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (876) 555-0100" autocomplete="tel" />
+            </div>
+            <div class="modal__field">
+              <label for="whatsapp">WhatsApp number</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Same as above, or different" />
+              <span class="modal__field-hint">Leave blank if same as phone</span>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="email">Email address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="nadine@email.com" autocomplete="email" />
+          </div>
+        </div>
+
+        <div class="modal__field-group">
+          <h4 class="modal__group-title">Delivery address</h4>
+          <div class="modal__field">
+            <label for="address">Street address <span class="req">*</span></label>
+            <input type="text" id="address" name="address" placeholder="12 Shortwood Road" autocomplete="street-address" />
+          </div>
+          <div class="modal__field-row">
+            <div class="modal__field">
+              <label for="community">Community / Area <span class="req">*</span></label>
+              <input type="text" id="community" name="community" placeholder="Papine" />
+            </div>
+            <div class="modal__field">
+              <label for="parish">Parish <span class="req">*</span></label>
+              <select id="parish" name="parish">
+                <option value="" disabled selected>Select parish</option>
+                <option>Kingston</option>
+                <option>St. Andrew</option>
+                <option>St. Catherine</option>
+                <option>Clarendon</option>
+                <option>Manchester</option>
+                <option>St. Elizabeth</option>
+                <option>Westmoreland</option>
+                <option>Hanover</option>
+                <option>St. James</option>
+                <option>Trelawny</option>
+                <option>St. Ann</option>
+                <option>St. Mary</option>
+                <option>Portland</option>
+                <option>St. Thomas</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="deliveryDay">Preferred delivery day <span class="req">*</span></label>
+            <select id="deliveryDay" name="deliveryDay">
+              <option value="" disabled selected>Select a day</option>
+              <option>Monday</option>
+              <option>Wednesday</option>
+              <option>Friday</option>
+              <option>Saturday</option>
+            </select>
+            <span class="modal__field-hint">Bi-weekly — we'll confirm your first delivery date by WhatsApp.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: Preferences & referral -->
+      <div class="modal__body hidden" id="step3">
+        <div class="modal__field-group">
+          <h4 class="modal__group-title">Household & dietary notes</h4>
+          <div class="modal__field-row">
+            <div class="modal__field">
+              <label for="householdSize">Household size</label>
+              <select id="householdSize" name="householdSize">
+                <option value="" disabled selected>How many people?</option>
+                <option value="1">Just me</option>
+                <option value="2">2 people</option>
+                <option value="3">3 people</option>
+                <option value="4">4 people</option>
+                <option value="5+">5 or more</option>
+              </select>
+            </div>
+            <div class="modal__field">
+              <label for="cookingFreq">How often do you cook?</label>
+              <select id="cookingFreq" name="cookingFreq">
+                <option value="" disabled selected>Select frequency</option>
+                <option>Daily</option>
+                <option>4–6 days a week</option>
+                <option>2–3 days a week</option>
+                <option>Rarely — meal prep mostly</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label>Dietary preferences or restrictions</label>
+            <div class="modal__checkboxes">
+              <label class="check-pill"><input type="checkbox" name="dietary" value="vegan" /><span>Vegan</span></label>
+              <label class="check-pill"><input type="checkbox" name="dietary" value="vegetarian" /><span>Vegetarian</span></label>
+              <label class="check-pill"><input type="checkbox" name="dietary" value="gluten-free" /><span>Gluten-free</span></label>
+              <label class="check-pill"><input type="checkbox" name="dietary" value="diabetic" /><span>Diabetic-friendly</span></label>
+              <label class="check-pill"><input type="checkbox" name="dietary" value="low-sodium" /><span>Low sodium</span></label>
+              <label class="check-pill"><input type="checkbox" name="dietary" value="none" /><span>No restrictions</span></label>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="specialNotes">Special instructions</label>
+            <textarea id="specialNotes" name="specialNotes" rows="3" placeholder="Anything else we should know — allergies, gate codes, best time to deliver..."></textarea>
+          </div>
+        </div>
+
+        <div class="modal__field-group">
+          <h4 class="modal__group-title">How did you find us?</h4>
+          <div class="modal__field">
+            <label for="referralSource">Referral source</label>
+            <select id="referralSource" name="referralSource">
+              <option value="" disabled selected>Select one</option>
+              <option>Instagram</option>
+              <option>Facebook</option>
+              <option>TikTok</option>
+              <option>Friend or family</option>
+              <option>Google search</option>
+              <option>WhatsApp group</option>
+              <option>Event or market</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="modal__field">
+            <label for="referralCode">Referral code <span class="modal__optional">(optional)</span></label>
+            <input type="text" id="referralCode" name="referralCode" placeholder="e.g. NADINE20" style="text-transform:uppercase;" />
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: Review & confirm -->
+      <div class="modal__body hidden" id="step4">
+        <div class="modal__review" id="reviewContent">
+          <!-- populated by JS -->
+        </div>
+        <label class="modal__consent">
+          <input type="checkbox" id="consentCheck" />
+          <span>I agree to the <a href="#" target="_blank">Terms of Service</a> and understand that my subscription renews bi-weekly until cancelled.</span>
+        </label>
+      </div>
+
+      <!-- SUCCESS STATE -->
+      <div class="modal__body modal__success hidden" id="stepSuccess">
+        <div class="modal__success-icon">
+          <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5"/><path d="M20 32l8 8 16-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>You're on the list.</h3>
+        <p>Thank you for subscribing to Farm to Table. We'll reach out via WhatsApp within 24 hours to confirm your first delivery date and answer any questions.</p>
+        <p class="modal__success-detail">Check your email for a summary of your subscription.</p>
+        <button class="btn btn--primary" id="successClose">Back to site</button>
+      </div>
+
+      <!-- Footer nav -->
+      <div class="modal__footer" id="modalFooter">
+        <button class="btn btn--ghost-dark" id="modalBack">Back</button>
+        <div class="modal__footer-right">
+          <p class="modal__footer-note" id="footerNote"></p>
+          <button class="btn btn--primary" id="modalNext">Continue</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
