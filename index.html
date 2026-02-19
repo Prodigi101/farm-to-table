@@ -561,32 +561,30 @@
                 <option value="" disabled selected>Select parish</option>
                 <option>Kingston</option>
                 <option>St. Andrew</option>
-                <option>St. Catherine</option>
-                <option>Clarendon</option>
-                <option>Manchester</option>
-                <option>St. Elizabeth</option>
-                <option>Westmoreland</option>
-                <option>Hanover</option>
-                <option>St. James</option>
-                <option>Trelawny</option>
-                <option>St. Ann</option>
-                <option>St. Mary</option>
-                <option>Portland</option>
-                <option>St. Thomas</option>
               </select>
             </div>
           </div>
-          <div class="modal__field">
-            <label for="deliveryDay">Preferred delivery day <span class="req">*</span></label>
-            <select id="deliveryDay" name="deliveryDay">
-              <option value="" disabled selected>Select a day</option>
-              <option>Monday</option>
-              <option>Wednesday</option>
-              <option>Friday</option>
-              <option>Saturday</option>
-            </select>
-            <span class="modal__field-hint">Bi-weekly — we'll confirm your first delivery date by WhatsApp.</span>
+          <div class="modal__field-row">
+            <div class="modal__field">
+              <label for="deliveryDay">Preferred delivery day <span class="req">*</span></label>
+              <select id="deliveryDay" name="deliveryDay">
+                <option value="" disabled selected>Select a day</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+              </select>
+            </div>
+            <div class="modal__field">
+              <label for="deliveryTime">Preferred time window <span class="req">*</span></label>
+              <select id="deliveryTime" name="deliveryTime">
+                <option value="" disabled selected>Select a window</option>
+                <option value="9am–11am">9am – 11am</option>
+                <option value="11am–1pm">11am – 1pm</option>
+                <option value="1pm–3pm">1pm – 3pm</option>
+                <option value="2pm–4pm">2pm – 4pm</option>
+              </select>
+            </div>
           </div>
+          <span class="modal__field-hint">Deliveries run Fridays &amp; Saturdays, 9am–4pm. We'll confirm your exact window by WhatsApp.</span>
         </div>
       </div>
 

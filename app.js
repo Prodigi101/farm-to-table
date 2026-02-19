@@ -243,7 +243,7 @@ function validateStep(step) {
   if (step === 1) return true; // swaps are optional
 
   if (step === 2) {
-    const required = ['firstName', 'lastName', 'phone', 'email', 'address', 'community', 'parish', 'deliveryDay'];
+    const required = ['firstName', 'lastName', 'phone', 'email', 'address', 'community', 'parish', 'deliveryDay', 'deliveryTime'];
     let valid = true;
     required.forEach(id => {
       const el = document.getElementById(id);
@@ -292,6 +292,7 @@ function renderReview() {
         <div class="modal__review-row"><dt>Email</dt><dd>${get('email')}</dd></div>
         <div class="modal__review-row"><dt>Address</dt><dd>${get('address')}, ${get('community')}, ${get('parish')}</dd></div>
         <div class="modal__review-row"><dt>Delivery day</dt><dd>${get('deliveryDay')}s (bi-weekly)</dd></div>
+        <div class="modal__review-row"><dt>Time window</dt><dd>${get('deliveryTime')}</dd></div>
       </dl>
     </div>
     <div class="modal__review-section">
