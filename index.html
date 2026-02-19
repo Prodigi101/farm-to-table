@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farm to Table — Seasonal Produce Delivered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">Farm&nbsp;to&nbsp;Table</a>
+      <nav class="nav__links">
+        <a href="#how">How it works</a>
+        <a href="#tiers">Plans</a>
+        <a href="#produce">Seasonal</a>
+        <a href="#about">Our story</a>
+      </nav>
+      <a href="#tiers" class="btn btn--outline nav__cta">Start your box</a>
+      <button class="nav__burger" id="burger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#how" class="mobile-menu__link">How it works</a>
+    <a href="#tiers" class="mobile-menu__link">Plans</a>
+    <a href="#produce" class="mobile-menu__link">Seasonal</a>
+    <a href="#about" class="mobile-menu__link">Our story</a>
+    <a href="#tiers" class="btn btn--primary mobile-menu__cta">Start your box</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__overlay"></div>
+      <div class="hero__shapes">
+        <div class="shape shape--1"></div>
+        <div class="shape shape--2"></div>
+        <div class="shape shape--3"></div>
+      </div>
+    </div>
+    <div class="hero__content container">
+      <p class="eyebrow">Harvest. Pack. Deliver.</p>
+      <h1 class="hero__headline">
+        The farm.<br />
+        <em>Straight to your door.</em>
+      </h1>
+      <p class="hero__sub">Bi-weekly curated boxes of peak-season produce sourced from local farms, grown the way nature intended. No waste. No guesswork. Just real food.</p>
+      <div class="hero__actions">
+        <a href="#tiers" class="btn btn--primary btn--lg">Choose your plan</a>
+        <a href="#how" class="btn btn--ghost btn--lg">See how it works</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num">48h</span>
+          <span class="stat__label">Farm to door</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">10+</span>
+          <span class="stat__label">Partner farms</span>
+        </div>
+        <div class="stat__divider"></div>
+        <div class="stat">
+          <span class="stat__num">0</span>
+          <span class="stat__label">Middlemen</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span> Tomatoes</span><span class="dot">&#8212;</span>
+      <span>Kale</span><span class="dot">&#8212;</span>
+      <span>Cilantro</span><span class="dot">&#8212;</span>
+      <span>Parsley</span><span class="dot">&#8212;</span>
+      <span>Purple Cabbage</span><span class="dot">&#8212;</span>
+      <span>Carrots</span><span class="dot">&#8212;</span>
+      <span>Celery</span><span class="dot">&#8212;</span>
+      <span>Irish Potatoes</span><span class="dot">&#8212;</span>
+      <span>Watermelon</span><span class="dot">&#8212;</span>
+      <span>Scotch Bonnet Peppers</span><span class="dot">&#8212;</span>
+      <span>Onions</span><span class="dot">&#8212;</span>
+      <span>Sweet Potatoes</span><span class="dot">&#8212;</span>
+      <span>Fuji Apples</span><span class="dot">&#8212;</span>
+      <span>D'anjou Pear</span><span class="dot">&#8212;</span>
+      <span>Pak Choy</span><span class="dot">&#8212;</span>
+      <span>Romaine Lettuce</span><span class="dot">&#8212;</span>
+      <span>Plantains</span><span class="dot">&#8212;</span>
+      <span>Spinach</span><span class="dot">&#8212;</span>
+      <span>Callaloo</span><span class="dot">&#8212;</span>
+      <span>Bell Peppers</span><span class="dot">&#8212;</span>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Process</p>
+        <h2 class="section-title">From soil to your shelf<br /><em>in three steps</em></h2>
+      </div>
+      <div class="how__steps">
+        <div class="how__step" data-reveal>
+          <div class="how__step-num">01</div>
+          <div class="how__step-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.5"/><path d="M24 14v10l6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Choose your tier</h3>
+          <p>Select the box size that fits your household. Pause or cancel anytime — no strings attached.</p>
+        </div>
+        <div class="how__connector"></div>
+        <div class="how__step" data-reveal>
+          <div class="how__step-num">02</div>
+          <div class="how__step-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 16l16-8 16 8v16l-16 8L8 32V16z" stroke="currentColor" stroke-width="1.5"/><path d="M24 8v32M8 16l16 8 16-8" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <h3>We harvest & pack</h3>
+          <p>Our farmers harvest within 24hrs of your delivery day. Every item is hand-selected, hand washed and packed in compostable materials, and delivered at your doorstep.</p>
+        </div>
+        <div class="how__connector"></div>
+        <div class="how__step" data-reveal>
+          <div class="how__step-num">03</div>
+          <div class="how__step-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="20" width="36" height="22" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M16 20V14a8 8 0 0116 0v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Enjoy at peak freshness</h3>
+          <p>We deliver the conviction that what you eat should be real, fresh, and traceable — from the farm to your door in 24–48 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSCRIPTION TIERS -->
+  <section class="tiers" id="tiers">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">Membership</p>
+        <h2 class="section-title">Find your<br /><em>perfect box</em></h2>
+        <p class="section-sub">Delivered every two weeks. Every plan includes free delivery and the ability to swap or pause anytime.</p>
+      </div>
+
+      <div class="tiers__grid">
+
+        <!-- ESSENTIALS -->
+        <div class="tier-card" data-reveal>
+          <div class="tier-card__top">
+            <p class="tier-card__label">Essentials</p>
+            <div class="tier-card__price">
+              <span class="tier-card__currency">J$</span>
+              <span class="tier-card__amount">14,000</span>
+              <span class="tier-card__period">/ mo</span>
+            </div>
+            <p class="tier-card__for">Ideal for young professionals &amp; households of 1–2</p>
+            <p class="tier-card__desc">A curated weekly selection of fresh local staples — simple, wholesome, and seasonal.</p>
+          </div>
+          <ul class="tier-card__features">
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>2 leafy greens <span class="feat-note">(callaloo, lettuce, pak choi)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>2 root vegetables <span class="feat-note">(carrot, sweet potato, yam)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>2 everyday staples <span class="feat-note">(tomato, scallion, thyme, onion)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 seasonal fruit <span class="feat-note">(banana, papaya, pineapple, watermelon)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 peak flex/seasonal item</li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>2 swaps per month</li>
+            <li class="muted"><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Imported items</li>
+            <li class="muted"><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Pantry add-ons</li>
+          </ul>
+          <div class="tier-card__meta">
+            <span class="meta-pill">&#9675; 16–18 lbs</span>
+            <span class="meta-pill">&#9675; Every 2 weeks</span>
+          </div>
+          <a href="#" class="btn btn--outline btn--full">Get started</a>
+        </div>
+
+        <!-- SELECT (featured) -->
+        <div class="tier-card tier-card--featured" data-reveal>
+          <div class="tier-card__badge">Most popular</div>
+          <div class="tier-card__top">
+            <p class="tier-card__label">Select</p>
+            <div class="tier-card__price">
+              <span class="tier-card__currency">J$</span>
+              <span class="tier-card__amount">24,000</span>
+              <span class="tier-card__period">/ mo</span>
+            </div>
+            <p class="tier-card__for">Families of 3–4, health-conscious professionals &amp; home cooks</p>
+            <p class="tier-card__desc">Everything in Essentials, elevated — with premium produce, imported items, and recipe inspiration.</p>
+          </div>
+          <ul class="tier-card__features">
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Everything in Essentials</li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 Half Gallon Natural juice <span class="feat-note">(Coconut Water, Cold Pressed juice)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 herb bundle <span class="feat-note">(thyme, mint, basil, or escallion)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 imported item <span class="feat-note">(Gala apples, grapes, pear)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Weekly recipe card</li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>3 swaps per month</li>
+            <li class="muted"><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Smoothie pack</li>
+            <li class="muted"><svg viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Pantry add-ons</li>
+          </ul>
+          <div class="tier-card__meta tier-card__meta--light">
+            <span class="meta-pill">&#9675; 20–22 lbs</span>
+            <span class="meta-pill">&#9675; Every 2 weeks</span>
+          </div>
+          <a href="#" class="btn btn--primary btn--full">Get started</a>
+        </div>
+
+        <!-- RESERVE -->
+        <div class="tier-card" data-reveal>
+          <div class="tier-card__top">
+            <p class="tier-card__label">Reserve</p>
+            <div class="tier-card__price">
+              <span class="tier-card__currency">J$</span>
+              <span class="tier-card__amount">38,000</span>
+              <span class="tier-card__period">/ mo</span>
+            </div>
+            <p class="tier-card__for">Larger households, entertainers, health enthusiasts &amp; expats</p>
+            <p class="tier-card__desc">Our most expansive box — rare local finds, smoothie packs, pantry add-ons, and a personal touch.</p>
+          </div>
+          <ul class="tier-card__features">
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Everything in Select</li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 premium item <span class="feat-note">(kale, broccoli, spinach, celery)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>1 specialty local item <span class="feat-note">(dragon fruit, star apple, Jamaican cherry)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Upgrade to 1 Gallon Natural Juice <span class="feat-note">(Coconut Water, Cold Pressed Juices)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Pantry add-on <span class="feat-note">(honey, local seasoning, coconut oil)</span></li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Handwritten branded note card</li>
+            <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Unlimited swaps</li>
+          </ul>
+          <div class="tier-card__meta">
+            <span class="meta-pill">&#9675; 25–30 lbs</span>
+            <span class="meta-pill">&#9675; Every 2 weeks</span>
+          </div>
+          <a href="#" class="btn btn--outline btn--full">Get started</a>
+        </div>
+
+      </div>
+      <p class="tiers__note">All plans: pause or cancel anytime &middot; Fresh-packed on delivery day &middot; Local &amp; seasonal always</p>
+    </div>
+  </section>
+
+  <!-- PRODUCE SPOTLIGHT -->
+  <section class="produce" id="produce">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">In season now</p>
+        <h2 class="section-title">What's in<br /><em>this week's box</em></h2>
+      </div>
+      <div class="produce__grid">
+        <div class="produce__card" data-reveal>
+          <div class="produce__img produce__img--1"></div>
+          <div class="produce__info">
+            <span class="produce__farm">Clearwater Farm, CA</span>
+            <h4>Heirloom Tomatoes</h4>
+            <p>A rainbow of Cherokee Purple, Green Zebra, and Sun Gold — harvested this morning.</p>
+          </div>
+        </div>
+        <div class="produce__card" data-reveal>
+          <div class="produce__img produce__img--2"></div>
+          <div class="produce__info">
+            <span class="produce__farm">Blue Ridge Growers, OR</span>
+            <h4>Wild Foraged Mushrooms</h4>
+            <p>Chanterelle, oyster, and lion's mane from Pacific Northwest old-growth forests.</p>
+          </div>
+        </div>
+        <div class="produce__card" data-reveal>
+          <div class="produce__img produce__img--3"></div>
+          <div class="produce__info">
+            <span class="produce__farm">Mesa Verde Organics, AZ</span>
+            <h4>Watermelon Radish</h4>
+            <p>Strikingly beautiful cross-sections of deep fuchsia — crisp, peppery, and sweet.</p>
+          </div>
+        </div>
+        <div class="produce__card" data-reveal>
+          <div class="produce__img produce__img--4"></div>
+          <div class="produce__info">
+            <span class="produce__farm">Sunstone Valley, WA</span>
+            <h4>Lacinato Kale</h4>
+            <p>Tender, dark-leafed dinosaur kale at peak sweetness after the first frost.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="container about__inner">
+      <div class="about__visual" data-reveal>
+        <div class="about__img-wrap">
+          <div class="about__img"></div>
+          <div class="about__img-accent"></div>
+        </div>
+        <div class="about__tag">
+          <span class="about__tag-num">10+</span>
+          <span class="about__tag-text">Regenerative<br/>partner farms</span>
+        </div>
+      </div>
+      <div class="about__text" data-reveal>
+        <p class="eyebrow">Our story</p>
+        <h2 class="section-title">We believe<br /><em>food should taste<br />of somewhere</em></h2>
+        <p>Farm to Table was founded by a former chef who was tired of the gap between what grows in the ground and what ends up on the plate. Somewhere between the farmer who woke up at 4am and the meal you're preparing, something usually goes wrong.</p>
+        <p>The chain is too long. The hands too many. The freshness — gone. We built this to fix that. One box. Twice weekly. Straight from Jamaican soil to your door</p>
+        <div class="about__values">
+          <div class="about__value">
+            <div class="about__value-icon">&#9632;</div>
+            <div>
+              <strong>Regenerative only</strong>
+              <p>Every partner farm builds, not depletes, topsoil health.</p>
+            </div>
+          </div>
+          <div class="about__value">
+            <div class="about__value-icon">&#9632;</div>
+            <div>
+              <strong>Zero food waste</strong>
+              <p>Imperfect produce goes to partner businesses, never landfill.</p>
+            </div>
+          </div>
+          <div class="about__value">
+            <div class="about__value-icon">&#9632;</div>
+            <div>
+              <strong>Radical transparency</strong>
+              <p>Every item is traceable to the field and the farmer who grew it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow">From our members</p>
+        <h2 class="section-title">Real kitchens,<br /><em>real feedback</em></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial" data-reveal>
+          <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"I've tried every produce box on the market. Nothing else comes close to this quality. The heirloom tomatoes alone are worth the subscription."</blockquote>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--1"></div>
+            <div>
+              <strong>Sarah M.</strong>
+              <span>Harvest member, 14 months</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial" data-reveal>
+          <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"As a chef, sourcing is everything. I've onboarded three of my restaurant clients to Farm to Table. The consistency and provenance documentation is unmatched."</blockquote>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--2"></div>
+            <div>
+              <strong>James K.</strong>
+              <span>Estate member, 8 months</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial" data-reveal>
+          <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <blockquote>"The recipe cards have genuinely made me a better cook. I've learned what to do with kohlrabi, cardoons, and a dozen vegetables I'd never touched before."</blockquote>
+          <div class="testimonial__author">
+            <div class="testimonial__avatar testimonial__avatar--3"></div>
+            <div>
+              <strong>Priya T.</strong>
+              <span>Seed member, 6 months</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-banner__inner">
+      <div class="cta-banner__text">
+        <p class="eyebrow eyebrow--light">Limited availability</p>
+        <h2>Your first box is<br /><em>on us.</em></h2>
+        <p>Start your subscription and we'll deduct $20 from your first box. No commitment required.</p>
+      </div>
+      <div class="cta-banner__action">
+        <a href="#tiers" class="btn btn--light btn--lg">Claim your $20 off</a>
+        <p class="cta-banner__fine">Cancel anytime. Free delivery always.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <p class="footer__logo">Farm to Table</p>
+        <p class="footer__tagline">Connecting farmers and families since 2019.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" aria-label="Pinterest">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.236 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.181-.78 1.172-4.97 1.172-4.97s-.299-.598-.299-1.482c0-1.388.806-2.428 1.808-2.428.853 0 1.267.641 1.267 1.408 0 .858-.546 2.141-.828 3.329-.236.995.499 1.806 1.476 1.806 1.772 0 3.137-1.868 3.137-4.568 0-2.39-1.717-4.061-4.168-4.061-2.837 0-4.502 2.128-4.502 4.328 0 .857.33 1.775.741 2.278.081.099.093.186.069.286-.076.315-.244.995-.277 1.134-.045.181-.149.219-.344.132-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.967-.527-2.292-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z" stroke="currentColor" stroke-width="1.2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__nav">
+        <div class="footer__col">
+          <h5>Company</h5>
+          <a href="#">Our story</a>
+          <a href="#">Partner farms</a>
+          <a href="#">Careers</a>
+          <a href="#">Press</a>
+        </div>
+        <div class="footer__col">
+          <h5>Membership</h5>
+          <a href="#">Plans & pricing</a>
+          <a href="#">Gift a box</a>
+          <a href="#">Refer a friend</a>
+          <a href="#">Corporate</a>
+        </div>
+        <div class="footer__col">
+          <h5>Help</h5>
+          <a href="#">FAQ</a>
+          <a href="#">Delivery areas</a>
+          <a href="#">Contact us</a>
+          <a href="#">Pause or cancel</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>&copy; 2026 Farm to Table, Inc. All rights reserved.</p>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
